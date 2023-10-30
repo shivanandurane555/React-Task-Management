@@ -1,7 +1,18 @@
+import { Row, Col } from "reactstrap";
+import TaskForm from "./TaskForm/TaskForm";
+import TaskList from "./TaskList/TaskList";
+
 const TaskManager = () => {
   return (
     <>
-      <div>Task Manager</div>
+      <Row>
+        <Col>
+          <TaskForm />
+        </Col>
+        <Col>
+          <TaskList />
+        </Col>
+      </Row>
     </>
   );
 };

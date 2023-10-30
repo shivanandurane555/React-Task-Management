@@ -1,7 +1,8 @@
 const Header = () => {
   return (
     <>
-      <div>Header works</div>
+      <h1>Task Manager</h1>
+      <hr />
     </>
   );
 };
