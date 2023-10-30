@@ -1,9 +1,10 @@
 import { ListGroupItem, Button } from "reactstrap";
-const TaskItem = () => {
+const TaskItem = (props) => {
+  const { task } = props;
   return (
     <>
       <ListGroupItem>
-        Task 1
+        {task.title}
         <Button close />
       </ListGroupItem>
     </>
