@@ -1,9 +1,19 @@
 import { Form, FormGroup, Input, Label, Button } from "reactstrap";
 
-const TaskForm = () => {
+const TaskForm = (props) => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      title: "test",
+      description: "123",
+    };
+    props.addTask(data)
+  };
+
   return (
     <>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label htmlFor="title">Title</Label>
           <Input id="title" />
@@ -14,7 +24,9 @@ const TaskForm = () => {
           <Input type="textarea" id="description" rows="5" />
         </FormGroup>
 
-        <Button color="primary">Add</Button>
+        <Button color="primary" >
+          Add
+        </Button>
       </Form>
     </>
   );
